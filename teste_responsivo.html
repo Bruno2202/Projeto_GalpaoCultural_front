@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Teste Responsivo</title>
+    <style>
+        body { 
+            margin: 0; 
+            padding: 20px; 
+            font-family: Arial, sans-serif; 
+        }
+        .teste { 
+            height: 300px; 
+            margin: 20px 0;
+            border: 2px solid #333;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 18px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+        }
+        .teste1 { 
+            background-image: url('assets/wallpaper.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        .teste2 { 
+            background-image: url('assets/wallpaper.jpg');
+            background-size: contain;
+            background-position: center;
+        }
+        .teste3 { 
+            background-image: url('assets/wallpaper.jpg');
+            background-size: 100% 100%;
+            background-position: center;
+        }
+        .teste4 { 
+            background-image: url('assets/wallpaper.jpg');
+            background-size: auto;
+            background-position: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Teste Responsivo do Wallpaper</h1>
+    
+    <div class="teste teste1">
+        <p>Teste 1: background-size: cover</p>
+    </div>
+    
+    <div class="teste teste2">
+        <p>Teste 2: background-size: contain</p>
+    </div>
+    
+    <div class="teste teste3">
+        <p>Teste 3: background-size: 100% 100%</p>
+    </div>
+    
+    <div class="teste teste4">
+        <p>Teste 4: background-size: auto</p>
+    </div>
+    
+    <p><strong>Instruções:</strong></p>
+    <ol>
+        <li>Abra este arquivo no navegador</li>
+        <li>Veja qual teste mostra o wallpaper melhor</li>
+        <li>Me diga qual funcionou melhor</li>
+    </ol>
+    
+    <p><strong>Se nenhuma imagem aparecer:</strong></p>
+    <ul>
+        <li>Verifique se o arquivo existe em src/assets/wallpaper.jpg</li>
+        <li>Verifique se o servidor está rodando</li>
+        <li>Teste o caminho direto: http://localhost:4200/assets/wallpaper.jpg</li>
+    </ul>
+</body>
+</html>
+

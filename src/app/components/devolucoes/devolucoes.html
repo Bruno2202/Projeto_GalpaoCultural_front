@@ -1,0 +1,56 @@
+<div class="container">
+  <!-- Seção de Devolução -->
+  <div class="devolucao-section">
+    <div class="header">
+      <button class="back-button" routerLink="/">←</button>
+      <h2>Devoluções de livros</h2>
+      <p class="subtitle">Digite seu WhatsApp para ver os livros emprestados</p>
+    </div>
+    
+    <div class="form-section">
+      <div class="field-group">
+        <label>WhatsApp</label>
+        <input type="text" placeholder="(11) 99999-9999" [(ngModel)]="celular">
+      </div>
+      
+      <button class="submit-button" (click)="verEmprestimos()">Buscar Livros</button>
+      
+   <!-- Resultados -->
+@if (!isLoading && emprestimos.length > 0) {
+  <div class="resultados">
+    <h3>Empréstimos encontrados:</h3>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Usuario</th>
+          <th>Livro</th>
+          <th>Autor</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let e of emprestimos">
+          <td>{{ e.nome }}</td>
+          <td>{{ e.livro }}</td>
+          <td>{{ e.autor }}</td>
+          <td><button class="submit-button" (click)="devolverLivro(e.id)"> Devolver </button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+}
+
+<!-- Caso não tenha resultados -->
+@if(!isLoading && emprestimos.length === 0 && buscaRealizada){
+  <div class="resultados">
+    <h3>Não tem emprestimos com esse número!</h3>
+  </div>
+}
+
+    </div>
+  </div>
+</div>
+
+
+ 

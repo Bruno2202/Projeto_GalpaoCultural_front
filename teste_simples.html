@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Teste Simples</title>
+    <style>
+        body { 
+            margin: 0; 
+            padding: 20px; 
+            font-family: Arial, sans-serif; 
+        }
+        .teste1 { 
+            height: 200px; 
+            background-image: url('assets/wallpaper.jpg');
+            background-size: cover;
+            background-position: center;
+            margin: 10px 0;
+            border: 2px solid red;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 18px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+        }
+        .teste2 { 
+            height: 200px; 
+            background-image: url('/wallpaper.jpg');
+            background-size: cover;
+            background-position: center;
+            margin: 10px 0;
+            border: 2px solid blue;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 18px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+        }
+        .teste3 { 
+            height: 200px; 
+            background-image: url('http://localhost:4200/wallpaper.jpg');
+            background-size: cover;
+            background-position: center;
+            margin: 10px 0;
+            border: 2px solid green;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 18px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+        }
+    </style>
+</head>
+<body>
+    <h1>Teste do Wallpaper - Biblioteca Comunitária</h1>
+    
+    <div class="teste1">
+        <p>Teste 1: assets/wallpaper.jpg</p>
+    </div>
+    
+    <div class="teste2">
+        <p>Teste 2: /wallpaper.jpg</p>
+    </div>
+    
+    <div class="teste3">
+        <p>Teste 3: http://localhost:4200/wallpaper.jpg</p>
+    </div>
+    
+    <p><strong>Instruções:</strong></p>
+    <ol>
+        <li>Abra este arquivo no navegador</li>
+        <li>Veja qual teste mostra o wallpaper</li>
+        <li>Me diga qual funcionou</li>
+    </ol>
+</body>
+</html>

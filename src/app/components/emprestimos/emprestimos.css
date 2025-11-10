@@ -1,0 +1,173 @@
+/* Reset e estilos globais */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Container principal */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #2c3e50;
+  padding: 20px;
+}
+
+/* Caixa do formulário */
+.formulario {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  max-width: 450px;
+  padding: 0;
+  overflow: hidden;
+}
+
+/* Header do formulário */
+.header {
+  position: relative;
+  padding: 30px 30px 20px;
+  text-align: center;
+}
+
+.back-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #666;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 50%;
+  transition: background-color 0.3s;
+}
+
+.back-button:hover {
+  background-color: #f0f0f0;
+}
+
+.formulario h2 {
+  color: #2c3e50;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  color: #7f8c8d;
+  font-size: 14px;
+  margin-bottom: 0;
+}
+
+/* Campos do formulário */
+form {
+  padding: 0 30px 30px;
+}
+
+.field-group {
+  margin-bottom: 20px;
+}
+
+.field-group label {
+  display: block;
+  color: #2c3e50;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.field-group input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid #ecf0f1;
+  border-radius: 10px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+  background: white;
+}
+
+.field-group input:focus {
+  outline: none;
+  border-color: #3498db;
+}
+
+.field-group input::placeholder {
+  color: #bdc3c7;
+}
+
+/* Botão de submit */
+.submit-button {
+  width: 100%;
+  padding: 16px;
+  background: linear-gradient(135deg, #8e44ad, #9b59b6);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  margin-top: 10px;
+}
+
+.submit-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(142, 68, 173, 0.4);
+}
+
+.submit-button:active {
+  transform: translateY(0);
+}
+
+/* Borda vermelha quando o campo é inválido e tocado */
+input.ng-invalid.ng-touched {
+  border-color: #e74c3c;
+  outline: none;
+}
+
+/* Mensagem de erro */
+.error {
+  color: #e74c3c;
+  font-size: 13px;
+  margin-top: 4px;
+}
+
+/* Botão desativado */
+button[disabled] {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Mantém o layout existente */
+.field-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+}
+
+input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.submit-button {
+  background-color: #2ecc71;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.submit-button:hover:not([disabled]) {
+  background-color: #27ae60;
+}

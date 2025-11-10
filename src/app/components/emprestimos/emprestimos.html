@@ -1,0 +1,49 @@
+<div class="container">
+  <div class="formulario">
+    <div class="header">
+      <button class="back-button" routerLink="/">←</button>
+      <h2>Emprestar Novo Livro</h2>
+      <p class="subtitle">Preencha as informações do empréstimo do livro</p>
+    </div>
+    
+    
+
+    <form #formEmprestimo="ngForm" (ngSubmit)="emprestarLivro(formEmprestimo)">
+  <div class="field-group">
+    <label>Nome da Pessoa</label>
+    <input type="text" name="nome" placeholder="Digite o nome completo"
+           [(ngModel)]="emprestimo.nome" #nome="ngModel" required />
+    <div class="error" *ngIf="nome.invalid && nome.touched">Campo obrigatório</div>
+  </div>
+
+  <div class="field-group">
+    <label>WhatsApp</label>
+    <input type="number" name="celular" placeholder="(18)99999-9999"
+           [(ngModel)]="emprestimo.celular" #celular="ngModel" required pattern="^[0-9]{11}$" (input)="LimitadorNumeros($event)" />
+    <div class="error" *ngIf="celular.invalid && celular.touched">Campo obrigatório</div>
+  </div>
+
+  <div class="field-group">
+    <label>Título do livro</label>
+    <input type="text" name="livro" placeholder="Digite o título do livro"
+           [(ngModel)]="emprestimo.livro" #livro="ngModel" required />
+    <div class="error" *ngIf="livro.invalid && livro.touched">Campo obrigatório</div>
+  </div>
+
+  <div class="field-group">
+    <label>Autor do livro</label>
+    <input type="text" name="autor" placeholder="Digite o nome do autor"
+           [(ngModel)]="emprestimo.autor" #autor="ngModel" required />
+    <div class="error" *ngIf="autor.invalid && autor.touched">Campo obrigatório</div>
+  </div>
+
+  <button type="submit" class="submit-button" [disabled]="formEmprestimo.invalid">
+    Emprestar Livro
+  </button>
+  </form>
+  <ngx-spinner bdColor = "rgba(0, 0, 0, 0.8)" size = "medium" color = "#fff" type ="fire"> <p style="color: white" > Emprestando... </p></ngx-spinner>
+  
+  </div>
+</div>
+
+

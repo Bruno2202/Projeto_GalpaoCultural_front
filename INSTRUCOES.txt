@@ -1,0 +1,30 @@
+========================================
+    BIBLIOTECA COMUNITARIA - GALPAO
+========================================
+
+🚀 COMO EXECUTAR:
+
+1. Clique duas vezes em "EXECUTAR.bat"
+2. Aguarde o navegador abrir
+3. Pronto!
+
+========================================
+🔧 SE DER ERRO:
+
+1. Instale Node.js: https://nodejs.org/
+2. Reinicie o computador
+3. Execute "EXECUTAR.bat" novamente
+
+========================================
+📁 ESTRUTURA SIMPLIFICADA:
+
+- EXECUTAR.bat = Executa o projeto
+- README.txt = Instruções básicas
+- src/app/home/ = Página inicial
+- src/app/components/emprestimos/ = Formulário
+- src/assets/ = Logo e imagens
+
+========================================
+🌐 URL: http://localhost:4200/
+
+========================================
